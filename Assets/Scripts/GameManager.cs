@@ -44,6 +44,17 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Mute"))
+        {
+            if (audioPlayer.bgmAudioSource.volume == 0)
+                audioPlayer.UnmuteBgm();
+            else 
+                audioPlayer.MuteBgm();
+        }
+    }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.buildIndex != 0)
@@ -62,8 +73,6 @@ public class GameManager : MonoBehaviour
 
             StartCoroutine(InstantiateCollectibles());
         }
-
-        Debug.Log("Scene Loaded");
     }
 
     public void AddCollectible()

@@ -4,18 +4,41 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource sfxAudioSource;
     public AudioClip collectSoundEffect;
+
+    public AudioSource bgmAudioSource;
+    public AudioClip backgroundMusic;
+
+    public bool loopBGM;
+    public float bgmInitialVolume;
 
     private void Awake()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
+        sfxAudioSource = gameObject.GetComponent<AudioSource>();
+
+        bgmAudioSource = gameObject.AddComponent<AudioSource>();
+        bgmAudioSource.clip = backgroundMusic;
+        bgmAudioSource.loop = loopBGM;
+        bgmAudioSource.volume = bgmInitialVolume;
+
+        bgmAudioSource.Play();
     }
 
     public void PlayCollectSoundEffect()
     {
-        audioSource.clip = collectSoundEffect;
+        sfxAudioSource.clip = collectSoundEffect;
 
-        audioSource.Play();
+        sfxAudioSource.Play();
+    }
+
+    public void MuteBgm()
+    {
+        bgmAudioSource.volume = 0;
+    }
+
+    public void UnmuteBgm()
+    {
+        bgmAudioSource.volume = bgmInitialVolume;
     }
 }

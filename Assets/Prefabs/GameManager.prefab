@@ -52,7 +52,6 @@ MonoBehaviour:
   LoseAnimator: {fileID: 0}
   Collectible: {fileID: 1209789182733373733, guid: 61f7c05c936a57142aaf6bb09599fdcc, type: 3}
   Score: {fileID: 0}
-  BackgroundMusic: {fileID: 8300000, guid: 5d00e094b33be2c48b9741ecbad4ec29, type: 3}
 --- !u!82 &4454915198227196240
 AudioSource:
   m_ObjectHideFlags: 0
@@ -164,6 +163,6 @@ MonoBehaviour:
   sfxAudioSource: {fileID: 0}
   collectSoundEffect: {fileID: 8300000, guid: 388c2ed24d02f654ebf3f93ff7ca829f, type: 3}
   bgmAudioSource: {fileID: 0}
-  backgroundMusic: {fileID: 0}
-  loopBGM: 0
-  bgmInitialVolume: 0
+  backgroundMusic: {fileID: 8300000, guid: e43e7f4f922862342b82ef4dfa8fba24, type: 3}
+  loopBGM: 1
+  bgmInitialVolume: 0.75

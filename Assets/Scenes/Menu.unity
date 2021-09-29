@@ -871,18 +871,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 408558359170475750, guid: 83335578b7f41de40915664c9858a342, type: 3}
-      propertyPath: loopBGM
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 408558359170475750, guid: 83335578b7f41de40915664c9858a342, type: 3}
-      propertyPath: backgroundMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 5d00e094b33be2c48b9741ecbad4ec29, type: 3}
-    - target: {fileID: 408558359170475750, guid: 83335578b7f41de40915664c9858a342, type: 3}
-      propertyPath: bgmInitialVolume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1486105132079775004, guid: 83335578b7f41de40915664c9858a342, type: 3}
       propertyPath: m_RootOrder
       value: 0
